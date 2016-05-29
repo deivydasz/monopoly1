@@ -1,0 +1,5 @@
+class JailsCard < Card
+
+  
+
+end

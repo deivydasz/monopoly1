@@ -2,7 +2,7 @@
 
 class Board 
 
-  SIZA = 10
+  SIZE = 10
 
   def draw
     template = File.read("index.html.erb")
@@ -11,12 +11,13 @@ class Board
   end
 
   def render_card
-    card = Card.new
-    card.draw
+     card = Card.new
+     card.draw
+    
   end
 
   def get_binding
-    get_binding
+    binding
   end
 
 end
