@@ -1,3 +1,5 @@
+require 'erb'
+
 class Board 
 
   def draw
