@@ -1,4 +1,4 @@
-class JailsCard < Card
+class JailCard < Card
 
   def type
     'JailsCard'

@@ -1,8 +1,23 @@
-
-
 class Board 
 
+  attr_accessor :cards
+
   SIZE = 10
+
+  def initialize
+    @cards = [
+      JailCard.new,
+      Card.new,
+      Card.new,
+      Card.new,
+      Card.new,
+      Card.new,
+      Card.new,
+      Card.new,
+      Card.new,
+      FreeParkingCard.new
+    ]
+  end
 
   def draw
     template = File.read("index.html.erb")
@@ -10,10 +25,10 @@ class Board
     File.open('index.html','w').write(renderer.result(self.get_binding))
   end
 
-  def render_card
-     card = Card.new
-     card.draw
-    
+  def render_cards
+    html = ''
+    cards.each { |card| html << card.draw}
+    html
   end
 
   def get_binding
