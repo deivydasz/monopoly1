@@ -1,4 +1,4 @@
-require 'erb'
+
 
 class Board 
 
