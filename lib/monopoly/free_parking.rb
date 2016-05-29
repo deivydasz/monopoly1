@@ -4,4 +4,12 @@ class FreeParkingCard < Card
 		'FreeParkingCard'
   end
 
+  def style_class
+    'free-parking'
+  end
+
+  def midle_text
+    'Free parking'
+  end
+
 end
