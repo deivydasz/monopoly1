@@ -30,29 +30,10 @@ class Board
     ]
   end
 
-  def draw
-    template = File.read("index.html.erb")
-    renderer = ERB.new(template)
-    File.open('index.html','w').write(renderer.result(self.get_binding))
+  def get_top_cards
+    @cards
   end
 
-  def render_top_cards
-    html = ''
-    cards.each { |card| html << card.draw}
-    html
-  end
-
-  def render_side_cards
-    html = ''
-
-    rows = side_cards.map { |row| CardRow.new(row[0], row[1])}
-
-    rows.each { |row| html << row.draw}
-    html
-  end
-
-  def get_binding
-    binding
-  end
+ 
 
 end

@@ -2,13 +2,14 @@ require 'sinatra/base'
 
 class MonopolyGame < Sinatra::Base
 
-  enable :sessions
+  set :views, "#{settings.root}/../../views"
+  set :public_folder , "#{settings.root}/../../assets"
 
   get '/' do
-  'DSrawing monopoly table'
+    @cards = Board.new.get_top_cards
+   erb :index
   end
-
-  
+ 
 
 end
 
