@@ -9,6 +9,10 @@ class Hcard < Card
     'horizontal-card'
   end
 
+  def midle_taxt
+    'Hcard'
+  end
+
  
 
 end
