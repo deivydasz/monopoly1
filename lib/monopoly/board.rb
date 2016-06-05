@@ -5,7 +5,7 @@ class Board
   SIZE = 10
 
   def initialize
-    @cards = [
+    @top_cards = [
       JailCard.new,
       Vcard.new,
       Vcard.new,
@@ -28,10 +28,23 @@ class Board
       [Hcard.new, Hcard.new],
       [Hcard.new,  Hcard.new]
     ]
+
+    @bottom_cards = [
+      JailCard.new,
+      Vcard.new,
+      Vcard.new,
+      Vcard.new,
+      Vcard.new,
+      Vcard.new,
+      Vcard.new,
+      Vcard.new,
+      Vcard.new,
+      FreeParkingCard.new
+    ]
   end
 
-  def get_top_cards
-    @cards
+  def get_cards
+    return @top_cards, @side_cards, @bottom_cards
   end
 
  
