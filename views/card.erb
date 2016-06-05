@@ -3,6 +3,9 @@
     <div class="header">
         <%= card.midle_text %>
     </div>
+    <% unless card.players.empty? %>
+    <div class="player">PLAYER</div>
+    <% end %>
   </div>
 
 

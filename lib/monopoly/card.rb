@@ -1,20 +1,30 @@
 class Card
 
-  def draw
-    template = File.read("html/_card.html.erb")
-    ERB.new(template).result(self.get_binding)
+  attr_accessor :players
+
+  def initialize
+    @players = []
+
   end
 
   def style_class
-    'simple-card'
+    "simple-card #{player_style}"
   end
 
   def midle_text
-    'name'
+    'SimpleCard'
   end
 
-  def get_binding
-    binding
+ 
+
+  def set_player(player:)
+    players << player
   end
+
+  def remove_player(player:)
+    players.delete_if { |element| element == player }
+  end
+
+  
 
 end
